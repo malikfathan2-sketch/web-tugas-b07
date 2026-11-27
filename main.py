@@ -18,7 +18,7 @@ st.markdown("""
     </h1>
     <p style="color: #cbd5e1; margin: 0; font-size: 16px;">
         Sistem Analisis Statistik & Klasifikasi Curah Hujan Berbasis GUI dan Machine Learning<br>
-        <strong>Program Studi Fisika — Algoritma dan Pemrograman</strong>
+        <strong>Physics Project>
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -48,16 +48,16 @@ with st.sidebar:
     st.progress(65, text="65% — Kerangka & Simulasi Siap")
 
     st.markdown("---")
-    st.markdown("**👥 The Team **")
+    st.markdown(" 👥 The Team ")
     st.info(
         "• **Malik Fathan A** (Web & Docs)\n"
         "• **Anggota 2** *(Menunggu data)*\n"
         "• **Anggota 3** *(Menunggu data)*\n"
         "• **Anggota 4** *(Menunggu data)*"
     )
-    st.caption("UAS Algoritma dan Pemrograman • 2026")
+    st.caption("Algoritma dan Pemrograman • 2026")
 
-# MENU 01
+# MENU 1
 if menu == "1. Algoritma & Source Code":
     st.header("01. Algoritma & Source Code")
     st.info("Bagian ini berisi penjelasan algoritma program, kode Python, kode GUI, dan kode ML (Random Forest).")
@@ -86,7 +86,7 @@ if menu == "1. Algoritma & Source Code":
 '''
     st.code(kode_contoh, language="python")
 
-# MENU 02
+# MENU 2
 elif menu == "2. GUI & Hasil Aplikasi":
     st.header("02. GUI & Hasil Aplikasi")
     st.info("Bagian ini memuat mockup desain, screenshot aplikasi desktop GUI, penjelasan fitur, dan tautan aplikasi.")
@@ -133,7 +133,7 @@ elif menu == "2. GUI & Hasil Aplikasi":
     - **Panel Prediksi ML:** Input suhu, kelembapan, dan tekanan udara untuk memprediksi kategori hujan.
     """)
 
-# MENU 03
+# MENU 3
 elif menu == "3. Flowchart & Sistem":
     st.header("03. Flowchart & Sistem")
     st.info("Bagian ini menampilkan diagram alir algoritma, flowchart sistem, dan arsitektur sistem Kelompok B07.")
@@ -141,7 +141,7 @@ elif menu == "3. Flowchart & Sistem":
     st.write("Gunakan bagian ini untuk menampilkan gambar diagram alir yang dibuat menggunakan Draw.io atau Lucidchart.")
     st.warning("Placeholder: Siapkan file gambar flowchart_sistem.png dan arsitektur_b07.png.")
 
-# MENU 04
+# MENU 4
 elif menu == "4. Data & Machine Learning":
     st.header("04. Data & Machine Learning")
     st.info("Bagian ini berisi dataset cuaca, sumber data, tahapan preprocessing, model Random Forest, dan evaluasi.")
@@ -173,7 +173,7 @@ elif menu == "4. Data & Machine Learning":
     - **Metrik Evaluasi:** Akurasi, *Precision*, *Recall*, dan *Confusion Matrix*.
     """)
 
-# MENU 05
+# MENU 5
 elif menu == "5. Laporan & Dokumentasi":
     st.header("05. Laporan & Dokumentasi")
     st.info("Bagian ini berisi ringkasan laporan akhir, latar belakang fisika, tujuan, metodologi, dan referensi.")
