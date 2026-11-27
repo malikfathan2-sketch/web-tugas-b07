@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(
-    page_title="Proyek Fisika B07 - Rainfall Data Analyzer",
+    page_title="Physics Project - Rainfall Data Analyzer",
     page_icon="🌧️",
     layout="wide"
 )
