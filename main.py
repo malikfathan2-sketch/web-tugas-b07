@@ -22,17 +22,38 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.sidebar.title("📂 Navigasi Proyek B07")
-menu = st.sidebar.radio(
-    "Pilih Bagian Dokumentasi:",
-    [
-        "01. Algoritma & Source Code",
-        "02. GUI & Hasil Aplikasi",
-        "03. Flowchart & Sistem",
-        "04. Data & Machine Learning",
-        "05. Laporan & Dokumentasi"
-    ]
-)
+with st.sidebar:
+    st.markdown("""
+    <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 14px; border-radius: 12px; margin-bottom: 12px;">
+        <div style="font-size: 12px; color: #7dd3fc; font-weight: 700; letter-spacing: 0.5px;">PRODI FISIKA • SEMESTER 1</div>
+        <div style="font-size: 18px; color: #f8fafc; font-weight: 800; margin-top: 2px;">🧭 Navigasi Proyek B07</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    menu = st.radio(
+        "Pilih Bagian Dokumentasi:",
+        [
+            "01. Algoritma & Source Code",
+            "02. GUI & Hasil Aplikasi",
+            "03. Flowchart & Sistem",
+            "04. Data & Machine Learning",
+            "05. Laporan & Dokumentasi"
+        ]
+    )
+
+    st.markdown("---")
+    st.markdown("**📊 Status Dokumentasi**")
+    st.progress(65, text="65% — Kerangka & Simulasi Siap")
+
+    st.markdown("---")
+    st.markdown("**👥 Tim Kelompok B07**")
+    st.info(
+        "• **Malik Fathan A** (Web & Docs)\n"
+        "• **Anggota 2** *(Menunggu data)*\n"
+        "• **Anggota 3** *(Menunggu data)*\n"
+        "• **Anggota 4** *(Menunggu data)*"
+    )
+    st.caption(" Algoritma dan Pemrograman • 2026")
 
 if menu == "01. Algoritma & Source Code":
     st.header("01. Algoritma & Source Code")
