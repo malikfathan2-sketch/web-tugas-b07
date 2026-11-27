@@ -48,7 +48,7 @@ with st.sidebar:
     st.progress(65, text="65% — Kerangka & Simulasi Siap")
 
     st.markdown("---")
-    st.markdown("**👥 The Team**")
+    st.markdown("**👥 The Team **")
     st.info(
         "• **Malik Fathan A** (Web & Docs)\n"
         "• **Anggota 2** *(Menunggu data)*\n"
