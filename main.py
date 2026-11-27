@@ -26,18 +26,18 @@ with st.sidebar:
     st.markdown("""
     <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 14px; border-radius: 12px; margin-bottom: 12px;">
         <div style="font-size: 12px; color: #7dd3fc; font-weight: 700; letter-spacing: 0.5px;">PRODI FISIKA • SEMESTER 1</div>
-        <div style="font-size: 18px; color: #f8fafc; font-weight: 800; margin-top: 2px;">🧭 Navigasi Proyek B07</div>
+        <div style="font-size: 18px; color: #f8fafc; font-weight: 800; margin-top: 2px;">🧭 Navigasi Proyek </div>
     </div>
     """, unsafe_allow_html=True)
 
     menu = st.radio(
-        "Pilih Bagian Dokumentasi:",
+        "Halaman :",
         [
-            "01. Algoritma & Source Code",
-            "02. GUI & Hasil Aplikasi",
-            "03. Flowchart & Sistem",
-            "04. Data & Machine Learning",
-            "05. Laporan & Dokumentasi"
+            "1. Algoritma & Source Code",
+            "2. GUI & Hasil Aplikasi",
+            "3. Flowchart & Sistem",
+            "4. Data & Machine Learning",
+            "5. Laporan & Dokumentasi"
         ]
     )
 
