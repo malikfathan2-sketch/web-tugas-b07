@@ -149,7 +149,7 @@ elif menu == "4. Data & Machine Learning":
     data_dummy = pd.DataFrame({
         "Tanggal": ["2026-01-01", "2026-01-02", "2026-01-03", "2026-01-04"],
         "Suhu_C": [24.5, 23.1, 26.0, 22.8],
-        "Kelembapan_%":,
+        "Kelembapan_%": list((80,90,75,95)),
         "Curah_Hujan_mm": [12.4, 58.2, 2.0, 110.5],
         "Kategori_BMKG": ["Hujan Ringan", "Hujan Lebat", "Hujan Ringan", "Hujan Sangat Lebat"]
     })
