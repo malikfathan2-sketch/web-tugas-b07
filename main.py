@@ -18,7 +18,7 @@ st.markdown("""
     </h1>
     <p style="color: #cbd5e1; margin: 0; font-size: 16px;">
         Sistem Analisis Statistik & Klasifikasi Curah Hujan Berbasis GUI dan Machine Learning<br>
-        <strong>Physics Project>
+        <strong>Physics Project
     </p>
 </div>
 """, unsafe_allow_html=True)
