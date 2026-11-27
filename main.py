@@ -7,6 +7,7 @@ st.set_page_config(
     layout="wide"
 )
 
+# HERO BANNER
 st.markdown("""
 <div style="background: linear-gradient(135deg, #0284c7 0%, #1e3a8a 100%); padding: 28px 32px; border-radius: 16px; border-left: 6px solid #38bdf8; box-shadow: 0 8px 20px rgba(0,0,0,0.3); margin-bottom: 20px;">
     <span style="background-color: rgba(255,255,255,0.15); color: #e0f2fe; padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 600;">
@@ -22,11 +23,12 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# SIDEBAR NAVIGASI
 with st.sidebar:
     st.markdown("""
     <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 14px; border-radius: 12px; margin-bottom: 12px;">
         <div style="font-size: 12px; color: #7dd3fc; font-weight: 700; letter-spacing: 0.5px;">PRODI FISIKA • SEMESTER 1</div>
-        <div style="font-size: 18px; color: #f8fafc; font-weight: 800; margin-top: 2px;">🧭 Navigasi Proyek </div>
+        <div style="font-size: 18px; color: #f8fafc; font-weight: 800; margin-top: 2px;">🧭 Navigasi Proyek</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -46,16 +48,17 @@ with st.sidebar:
     st.progress(65, text="65% — Kerangka & Simulasi Siap")
 
     st.markdown("---")
-    st.markdown("**👥 Tim Kelompok B07**")
+    st.markdown("**👥 The Team**")
     st.info(
         "• **Malik Fathan A** (Web & Docs)\n"
         "• **Anggota 2** *(Menunggu data)*\n"
         "• **Anggota 3** *(Menunggu data)*\n"
         "• **Anggota 4** *(Menunggu data)*"
     )
-    st.caption(" Algoritma dan Pemrograman • 2026")
+    st.caption("UAS Algoritma dan Pemrograman • 2026")
 
-if menu == "01. Algoritma & Source Code":
+# MENU 01
+if menu == "1. Algoritma & Source Code":
     st.header("01. Algoritma & Source Code")
     st.info("Bagian ini berisi penjelasan algoritma program, kode Python, kode GUI, dan kode ML (Random Forest).")
     st.subheader("🔗 Tautan Repository GitHub")
@@ -83,9 +86,11 @@ if menu == "01. Algoritma & Source Code":
 '''
     st.code(kode_contoh, language="python")
 
-elif menu == "02. GUI & Hasil Aplikasi":
+# MENU 02
+elif menu == "2. GUI & Hasil Aplikasi":
     st.header("02. GUI & Hasil Aplikasi")
     st.info("Bagian ini memuat mockup desain, screenshot aplikasi desktop GUI, penjelasan fitur, dan tautan aplikasi.")
+    
     with st.expander("⚡ Simulasi Interaktif Fisika Atmosfer & Klasifikasi Hujan (BMKG)", expanded=True):
         c_in1, c_in2, c_in3 = st.columns(3)
         with c_in1:
@@ -95,9 +100,7 @@ elif menu == "02. GUI & Hasil Aplikasi":
         with c_in3:
             hujan_mm = st.slider("🌧️ Curah Hujan (mm/hari):", 0.0, 150.0, 23.5, step=0.5)
 
-        # Perhitungan Fisika Meteorologi: Estimasi Suhu Titik Embun (Dew Point)
         titik_embun = round(suhu_c - ((100 - lembap) / 5.0), 1)
-
         if hujan_mm <= 0.5:
             kat, warna, status_risiko = "Berawan / Tidak Hujan", "normal", "Aman (Kondisi Kering)"
         elif hujan_mm <= 20.0:
@@ -114,10 +117,11 @@ elif menu == "02. GUI & Hasil Aplikasi":
         m1.metric("Kategori Intensitas (BMKG)", kat, f"{hujan_mm} mm/hari")
         m2.metric("Titik Embun (Dew Point)", f"{titik_embun} °C", f"RH {lembap}%")
         m3.metric("Status Hidrometeorologi", status_risiko, delta_color=warna)
+
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("🎨 Mockup & Desain Antarmuka")
-        st.warning("Placeholder: Unggah gambar mockup GUI ke folder proyek lalu tampilkan dengan st.image('nama_file.png').")
+        st.warning("Placeholder: Unggah gambar mockup GUI ke GitHub lalu tampilkan dengan st.image('nama_file.png').")
     with col2:
         st.subheader("🖥️ Screenshot Hasil Akhir Aplikasi")
         st.warning("Placeholder: Unggah screenshot aplikasi Python GUI yang sudah berjalan.")
@@ -129,25 +133,38 @@ elif menu == "02. GUI & Hasil Aplikasi":
     - **Panel Prediksi ML:** Input suhu, kelembapan, dan tekanan udara untuk memprediksi kategori hujan.
     """)
 
-elif menu == "03. Flowchart & Sistem":
+# MENU 03
+elif menu == "3. Flowchart & Sistem":
     st.header("03. Flowchart & Sistem")
     st.info("Bagian ini menampilkan diagram alir algoritma, flowchart sistem, dan arsitektur sistem Kelompok B07.")
     st.subheader("📐 Diagram Arsitektur & Flowchart")
     st.write("Gunakan bagian ini untuk menampilkan gambar diagram alir yang dibuat menggunakan Draw.io atau Lucidchart.")
     st.warning("Placeholder: Siapkan file gambar flowchart_sistem.png dan arsitektur_b07.png.")
 
-elif menu == "04. Data & Machine Learning":
+# MENU 04
+elif menu == "4. Data & Machine Learning":
     st.header("04. Data & Machine Learning")
     st.info("Bagian ini berisi dataset cuaca, sumber data, tahapan preprocessing, model Random Forest, dan evaluasi.")
     st.subheader("📊 Preview Dataset Cuaca (Contoh Simulasi)")
     data_dummy = pd.DataFrame({
         "Tanggal": ["2026-01-01", "2026-01-02", "2026-01-03", "2026-01-04"],
         "Suhu_C": [24.5, 23.1, 26.0, 22.8],
-        "Kelembapan_%":[78,88,72,95],
+        "Kelembapan_%":,
         "Curah_Hujan_mm": [12.4, 58.2, 2.0, 110.5],
         "Kategori_BMKG": ["Hujan Ringan", "Hujan Lebat", "Hujan Ringan", "Hujan Sangat Lebat"]
     })
     st.dataframe(data_dummy, use_container_width=True)
+
+    st.subheader("📈 Visualisasi Grafik Curah Hujan Harian")
+    st.bar_chart(data_dummy.set_index("Tanggal")["Curah_Hujan_mm"], color="#38bdf8")
+
+    with st.expander("📂 Uji Coba Unggah Dataset Cuaca (.CSV) Secara Langsung"):
+        file_csv = st.file_uploader("Upload file dataset cuaca (.csv) di sini:", type=["csv"])
+        if file_csv is not None:
+            df_upload = pd.read_csv(file_csv)
+            st.success(f"Berhasil memuat {len(df_upload)} baris data!")
+            st.dataframe(df_upload.head(10), use_container_width=True)
+
     st.subheader("🌲 Model Random Forest & Evaluasi")
     st.markdown("""
     - **Sumber Data:** Data observasi meteorologi harian (BMKG / Kaggle Weather Dataset).
@@ -156,7 +173,8 @@ elif menu == "04. Data & Machine Learning":
     - **Metrik Evaluasi:** Akurasi, *Precision*, *Recall*, dan *Confusion Matrix*.
     """)
 
-elif menu == "05. Laporan & Dokumentasi":
+# MENU 05
+elif menu == "5. Laporan & Dokumentasi":
     st.header("05. Laporan & Dokumentasi")
     st.info("Bagian ini berisi ringkasan laporan akhir, latar belakang fisika, tujuan, metodologi, dan referensi.")
     st.subheader("📖 Latar Belakang & Konsep Fisika")
