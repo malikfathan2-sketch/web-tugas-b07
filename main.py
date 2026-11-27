@@ -10,32 +10,33 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    .stApp { background: #f5f8fc; }
-    [data-testid="stSidebar"] { background: #10243a; }
-    [data-testid="stSidebar"] * { color: #eef6ff; }
+    .stApp { background: #0b132b; color: #f1f5f9; }
+    [data-testid="stSidebar"] { background: #0f172a; border-right: 1px solid #1e293b; }
+    [data-testid="stSidebar"] * { color: #e2e8f0 !important; }
     .hero {
-        background: linear-gradient(115deg, #123b5d, #176b87);
-        padding: 28px 30px; border-radius: 15px; color: white;
-        margin-bottom: 22px; border-bottom: 4px solid #67c5d5;
+        background: linear-gradient(125deg, #0284c7 0%, #1e3a8a 100%);
+        padding: 28px 32px; border-radius: 16px; color: white;
+        margin-bottom: 24px; border-left: 6px solid #38bdf8;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
     }
     .hero-kicker {
-        color: #bcecf2; font-size: 12px; font-weight: 700;
+        color: #bae6fd; font-size: 12px; font-weight: 700;
         letter-spacing: 1.2px; text-transform: uppercase;
     }
-    .hero h1 { color: white; font-size: 34px; margin: 9px 0 5px 0; }
-    .hero p { color: #e0edf5; margin: 0; font-size: 15px; }
+    .hero h1 { color: #ffffff !important; font-size: 36px; margin: 8px 0 6px 0; font-weight: 800; }
+    .hero p { color: #e2e8f0 !important; margin: 0; font-size: 15px; }
     .section-heading {
-        display: flex; align-items: center; gap: 10px; margin: 8px 0 4px 0;
+        display: flex; align-items: center; gap: 10px; margin: 10px 0 4px 0;
     }
     .section-number {
-        background: #d9f0f4; color: #14566c; border: 1px solid #a8dce5;
-        border-radius: 8px; padding: 5px 9px; font-size: 12px; font-weight: 800;
+        background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4);
+        border-radius: 8px; padding: 4px 10px; font-size: 12px; font-weight: 800;
     }
-    .section-title { color: #17364f; font-size: 23px; font-weight: 750; }
-    .section-note { color: #64748b; font-size: 13px; margin: 0 0 17px 2px; }
+    .section-title { color: #f8fafc; font-size: 24px; font-weight: 750; }
+    .section-note { color: #94a3b8; font-size: 13.5px; margin: 0 0 18px 2px; }
     div[data-testid="stMetric"] {
-        background: white; border: 1px solid #e1eaf1;
-        padding: 13px 15px; border-radius: 12px;
+        background: #1e293b; border: 1px solid #334155;
+        padding: 14px 16px; border-radius: 12px;
     }
     .stButton button, .stDownloadButton button { border-radius: 9px; }
     footer { visibility: hidden; }
