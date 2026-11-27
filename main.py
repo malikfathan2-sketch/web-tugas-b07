@@ -43,7 +43,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
 def section_heading(number, title, note=None):
     st.markdown(
         f'<div class="section-heading"><span class="section-number">{number}</span>'
@@ -65,7 +64,6 @@ def classify_rainfall(value):
     elif value <= 100:
         return "Hujan lebat"
     return "Hujan sangat lebat"
-
 
 # Header
 st.markdown("""
